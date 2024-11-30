@@ -1,8 +1,18 @@
 ///Variables
 
-$website-width:1280px;
+$website-width: 1280px;
 $main-color: #ffbc00;
 $light-color: #f4f4f4;
-$medium-color:#ccc;
+$medium-color: #ccc;
 $dark-color: #333;
-$backg-image: url('../img/principal.jpg');
+$backg-image: url("../img/principal.jpg");
+
+/* Configuracion de color de texto funcion */
+
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
