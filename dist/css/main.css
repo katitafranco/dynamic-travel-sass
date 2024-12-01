@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Configuracion de color de texto funcion */
 .container {
   max-width: 1280px;
@@ -62,6 +63,23 @@ input[class^="btn-"]:hover {
 
 .my-4 {
   margin: 4rem 0; }
+
+/* Fondos */
+.bg-main {
+  background: #ffbc00;
+  color: #fff; }
+
+.bg-dark {
+  background: #333;
+  color: #fff; }
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000; }
+
+.bg-medium {
+  background: #ccc;
+  color: #000; }
 
 .section-title {
   font-size: 2rem;
@@ -135,7 +153,8 @@ img {
 /* Header */
 /* aunque no hay un #header nos va a ser muy util para la herencia, lo usamos como un comodin o plantilla */
 #header {
-  /* HEader home */ }
+  /* HEader home */
+  /* Header Inner */ }
   #header-home {
     background-color: aqua;
     background: url("../img/principal.jpg") no-repeat center right/cover;
@@ -150,6 +169,10 @@ img {
         line-height: 1.2; }
       #header-home .header-content p {
         margin: 0.5rem; }
+  #header-inner {
+    background: url("../img/principal.jpg") no-repeat 20% 30%/cover;
+    height: 5.5rem;
+    border-bottom: 3px solid #ffbc00; }
 
 /* Estilos secciones inicio */
 /* Seccion A */
@@ -214,6 +237,56 @@ img {
         #home-c .process-icon:hover .process-step {
           background-color: #333;
           color: #fff; }
+
+/* Sección Nosotros */
+#about {
+  /* Nosotros a */
+  /* Nosotros b */
+  /* Nosotros c */ }
+  #about-a {
+    /* Grid Area */ }
+    #about-a .about-info {
+      display: grid;
+      grid-template-areas: "bioimage bio bio" "aw1 aw2 aw3";
+      grid-gap: 1.2rem; }
+    #about-a .bio-image {
+      grid-area: bioimage; }
+    #about-a .bio {
+      grid-area: bio;
+      border-left: 3px solid #ffbc00;
+      padding: 0.8rem; }
+    #about-a .award-1 {
+      grid-area: aw1; }
+    #about-a .award-2 {
+      grid-area: aw2; }
+    #about-a .award-3 {
+      grid-area: aw3; }
+  #about-b .progress {
+    overflow: hidden;
+    height: 20px;
+    background: #ccc;
+    border-radius: 5px; }
+    #about-b .progress div {
+      height: 100%;
+      color: #fff;
+      text-align: center;
+      background: #ffbc00; }
+  #about-c .testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem; }
+    #about-c .testimonials ul {
+      list-style: none;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center; }
+    #about-c .testimonials p {
+      border: 1px solid #ccc; }
+    #about-c .testimonials img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 0.5rem; }
 
 #main-footer {
   background: #333;
